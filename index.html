@@ -22,6 +22,7 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Source+Sans+Pro:wght@600;700&display=swap"
     rel="lesheet">
@@ -152,7 +153,7 @@
             <h2 class="h2 hero-title">Bienvenidos a TCER</h2>
 
             <p class="hero-text">
-              TCER es una startup de República Dominicana. Creamos herramientas para usuarios y empresas a bajo costo con altos estándares de calidad.
+              TCER es una startup de República Dominicana. Creamos herramientas para usuarios y empresas a un bajo costo con altos estándares de calidad.
             </p>
 
 	    <a href="#about">
@@ -184,6 +185,7 @@
       -->
 
       <section class="section about" id="about">
+        <div data-aos="fade-right">
         <div class="container">
 
           <figure class="about-banner">
@@ -196,11 +198,11 @@
             <h2 class="h2 section-title underline">TCER</h2>
 
             <p class="about-text">
-              TCER es una startup de República Dominicana. Creamos herramientas para usuarios y empresas a bajo costo con altos estándares de calidad.
+              TCER es una startup de República Dominicana. Creamos herramientas para usuarios y empresas a un bajo costo con altos estándares de calidad.
             </p>
 
             <p class="about-text">
-	    Nuestro equipo está capacitado con las últimas tecnologías para sastifaciser las necesidades de los usuarios con calidad, eficiencia y precio..
+	    Nuestro equipo está capacitado con las últimas tecnologías para satisfacer las necesidades de los usuarios con calidad, eficiencia y precio.
             </p>
 
             <ul class="stats-list">
@@ -228,6 +230,7 @@
           </div>
 
         </div>
+        </div>
       </section>
 
 
@@ -239,7 +242,7 @@
       -->
 
       <section class="section service" id="services">
-        <div class="container">
+        <div class="container" data-aos="fade-left">
 
 		<h2 class="h2 section-title underline">¿Nuestra forma de trabajo?</h2>
 
@@ -307,7 +310,7 @@
       -->
 
       <section class="section features" id="features">
-        <div class="container">
+        <div class="container" data-aos="fade-right">
 
           <h2 class="h2 section-title underline">Especialidades</h2>
 
@@ -342,7 +345,7 @@
                   <h3 class="h3 title">Diseño Gráfico</h3>
 
                   <p class="text">
-                    En nuestro equipo tenemos profesionales en esta área para hacer el mejor, servicios para los usuarios, hacemos, "diseño editorial o diseño de catálogos, el diseño web y móvil, la fotografía, la ilustración, el diseño 3D".
+                    En nuestro equipo tenemos profesionales en esta área, con los mejores servicios para los usuarios, hacemos diseño editorial o diseño de catálogos, diseño web y móvil,  fotografía,  ilustración y diseño 3D.
                   </p>
                 </div>
 
@@ -387,7 +390,7 @@
                   <h3 class="h3 title">Otros</h3>
 
                   <p class="text">
-                     Software para administrar tu empresa u emprendimiento, Plataforma de Estudio online, Seguridad Informática y de servidores..
+                    Software para administrar tu empresa u emprendimiento, plataforma de estudio online, seguridad informática y servidores.
                   </p>
                 </div>
 
@@ -408,7 +411,9 @@
       -->
 
       <section class="section blog" id="blog">
-        <div class="container">
+        <div class="container" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
 
           <h2 class="h2 section-title underline">TCER Family</h2>
 
@@ -533,7 +538,7 @@
 
                     <div class="publish-date">
                       <ion-icon name="time-outline"></ion-icon>
-		      <time datetime="2022-03-07">19 agosto, 2022</time>
+		        <time datetime="2022-03-07">19 agosto, 2022</time>
                     </div>
 
                     <button class="comment" aria-label="Comment">
@@ -601,93 +606,189 @@
             </li>
 
           </ul>
-
         </div>
       </section>
-
+      <center><div class="wrapper flex_align_justify" id="img">
+        <div class="terms_service">
+            <div class="tc_item tc_head flex_align_justify">
+              <div class="icon flex_align_justify">
+                <ion-icon name="terminal-outline"></ion-icon>
+              </div>
+              <div class="texta">
+                <h2>Política de privacidad</h2>
+                <p>Actualizaciado: 10 de enero de 2023</p>
+              </div>
+            </div>
+            <div class="tc_item tc_body">
+              <ol>
+                <li>
+                  <h3>Política de privacidad</h3>
+                  <p>La Política de privacidad de TCER se aplica al uso de este sitio, y sus términos forman parte de estas Condiciones de uso mediante esta referencia. Al utilizar el sitio usted entiende que cualquier mensaje o información que envíe al Sitio puede ser leído o interceptado por otros.</p>
+                </li>
+                <li>
+                  <h3>Derechos de propiedad intelectual</h3>
+                  <p>La innovación de TCER se materializa en su Propiedad Intelectual, que incluye Patentes, Marcas Registradas y Derechos de Autor.</p>
+                </li>
+              </ol>
+            </div>
+            <div class="tc_item tc_foot flex_align">
+                <button class="decline_btn" onclick="ocultar();">Accept</button>
+            </div>
+        </div>
+      </div></center>
     </article>
   </main>
-  <footer class="footer">
-    <div class="container footer-wrapper">
-      <div class="logo-col">
-        <a href="#" class="footer-logo">
-          <img src="logo.ico" alt="Company Logo" class="logo" />
-        </a>
+  <footer>
 
-        <ul class="social-links">
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon class="social-icon" name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <nav class="nav-col">
-        <p class="footer-heading">TCER Link</p>
-        <ul class="footer-nav">
-          <li><a href="#" class="footer-link">Inicio</a></li>
-          <li><a href="#about" class="footer-link">Sobre nosotros</a></li>
-          <li><a href="#services" class="footer-link">Trabajo</a></li>
-          <li><a href="#features" class="footer-link">Servicios</a></li>
-          <li><a href="#blog" class="footer-link">Blog</a></li>
-        </ul>
-      </nav>
-      
-      <nav class="nav-col">
-        <p class="footer-heading"></p>
-        <ul class="footer-nav">
-          <li><a href="#" class="footer-link"></a></li>
-          <li><a href="#" class="footer-link"></a></li>
-          <li><a href="#" class="footer-link"></a></li>
-          <li><a href="#" class="footer-link"></a></li>
-        </ul>
-      </nav>
+    <div class="footer-top">
+      <div class="container">
 
-      <nav class="nav-col">
-        <p class="footer-heading"></p>
-        <ul class="footer-nav">
-          <li><a href="#" class="footer-link"></a></li>
-          <li><a href="#" class="footer-link"></a></li>
-          <li><a href="#" class="footer-link"></a></li>
-          <li><a href="#" class="footer-link"></a></li>
-        </ul>
-      </nav>
+        <div class="footer-brand">
 
-      <div class="address-col">
-        <p class="footer-heading">Contact us</p>
-        <address class="contacts">
-          <p class="address">Jarabacoa, Republica Dominicana</p>
-          <p>
-            <a href="tel: 1 809 923 0987" class="footer-link">+1 809 923 0987</a>
-            <br />
-            <a href="mailto:info@company.com" class="footer-link"
-              >tcercompany@tcer.com.do</a
-            >
+          <a href="#" class="footer-logo">
+            <img src="./assets/images/logo.png" alt="TCERAcademy logo">
+          </a>
+
+          <p class="section-text">
+            TCER es una startup de República Dominicana.
           </p>
-        </address>
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="h4"></p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link"></a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link"></a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link"></a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link"></a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="h4"></p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link"></a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link"></a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link"></a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link"></a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="h4">TCER</p>
+            </li>
+
+            <li>
+              <a href="#home" class="footer-link">Inicio</a>
+            </li>
+
+            <li>
+              <a href="#about" class="footer-link">Sobre Nosotros</a>
+            </li>
+
+            <li>
+              <a href="#services" class="footer-link">Trabajo</a>
+            </li>
+
+            <li>
+              <a href="#features" class="footer-link">Servicios</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="h4">Ayuda</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Preguntas frecuentes</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Comunidad</a>
+            </li>
+
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=18099230987" class="footer-link">Chat en directo</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link"></a>
+            </li>
+
+          </ul>
+
+        </div>
+
       </div>
-      </div>
-  
-      <div class="footer-bottom">
+    </div>
+
+    <hr class="divider">
+
+    <div class="footer-bottom">
+      <div class="container">
+
         <p class="copyright">
-          &copy; 2022 <a href="#" class="copyright-link">TCER</a> Derechos reservados
+          &copy; 2022 <a href="#">TCER</a>
         </p>
+
+        <ul class="social-list">
+
+          <li>
+            <button class="social-link" onclick="mostrar();">Política de privacidad</button>
+          </li>
+
+          <li>
+            <a href="https://github.com/orgs/TCERCompany/repositories" class="social-link">GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/tcer_/" class="social-link">Instagram</a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/channel/UCvL60lFs-E3IesUlXAOKinQ" class="social-link">YouTube</a>
+          </li>
+
+        </ul>
+
       </div>
+    </div>
+
   </footer>
 
   
@@ -698,6 +799,11 @@
   <a href="#top" class="go-top  active" aria-label="Go To Top" data-go-top>
     <ion-icon name="arrow-up-outline"></ion-icon>
   </a>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=18099230987" class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
 
 
   <!-- 
@@ -710,6 +816,10 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 
