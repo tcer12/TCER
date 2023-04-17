@@ -1689,7 +1689,7 @@ background: #fff;
 
 .pricing-table__wrapper {
   position: relative;
-  padding-top: 700px;
+  padding-top: 900px;
 }
 
 .pricing-cards {
@@ -1773,6 +1773,7 @@ background: #fff;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s;
+  text-align: center;
 }
 
 /* Add hover effect on card elements */
