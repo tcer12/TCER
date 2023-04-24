@@ -1341,6 +1341,11 @@ marquee {
   margin: auto;
 }
 
+.imgsobre{
+  width: 350px;
+  margin: 30px;
+}
+
 /*Promo Inicio*/
 .newsletter { padding: var(--section-padding) 0; }
 
