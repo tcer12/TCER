@@ -619,6 +619,7 @@ body {
   padding-block-end: var(--section-padding);
 }
 
+
 .hero-content { margin-block-end: 50px; }
 
 .hero-subtitle {
@@ -1266,26 +1267,17 @@ marquee {
 	height: 600px;
 	/*animation: banner 10s infinite linear alternate;
 	background-size: 100% 100%;*/
-  background-color: #000;
+  background-image: url("../images/preuab.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 }
-/*@keyframes banner{
-	/*0%, 20%{
-		background-image: url("../images/pexels-pixabay-39578.jpg");
-	}
-	/*25%, 45%{
-		background-image: url("../images/pexels-christina-morillo-1181467.jpg");
-	}
-	50%, 70%{
-		background-image: url("../images/pexels-kevin-ku-577585.jpg");
-	}
-	/*75%, 100%{
-		background-image: url("../images/pexels-miguel-á-padriñán-1591060.jpg");
-	}
-}*/
+
 .capa{
 	width: 100%;
 	height: 100%;
@@ -1990,6 +1982,33 @@ background: #fff;
   color: #fff;
 }
 
+/*---------------
+  Blog
+------------------*/
+.iniciogaleria {
+  padding-block: 200px;
+  background-image: url("../images/preuab.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: hsl(230, 5%, 19%);
+  background-blend-mode: overlay;
+
+}
+
+.iniciogaleria img{
+  /*width: 650px;
+  height: 380px;*/
+  width: 50%;
+  margin: auto;
+}
+
+
+.descripcion{
+  text-align: center;
+  padding: 5px 25px;
+  color: rgb(53, 53, 53);
+}
 
 
 /*-----------------------------------*\
