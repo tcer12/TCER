@@ -1,141 +1,63 @@
 'use strict';
 
+
+
+/**
+ * add Event on elements
+ */
+
+const addEventOnElem = function (elem, type, callback) {
+  if (elem.length > 1) {
+    for (let i = 0; i < elem.length; i++) {
+      elem[i].addEventListener(type, callback);
+    }
+  } else {
+    elem.addEventListener(type, callback);
+  }
+}
+
+
+
 /**
  * navbar toggle
  */
 
-const navOpenBtn = document.querySelector("[data-nav-open-btn]");
 const navbar = document.querySelector("[data-navbar]");
-const navCloseBtn = document.querySelector("[data-nav-close-btn]");
+const navTogglers = document.querySelectorAll("[data-nav-toggler]");
+const navbarLinks = document.querySelectorAll("[data-nav-link]");
 const overlay = document.querySelector("[data-overlay]");
 
-const elemArr = [navCloseBtn, overlay, navOpenBtn];
-
-for (let i = 0; i < elemArr.length; i++) {
-  elemArr[i].addEventListener("click", function () {
-    navbar.classList.toggle("active");
-    overlay.classList.toggle("active");
-  });
+const toggleNavbar = function () {
+  navbar.classList.toggle("active");
+  overlay.classList.toggle("active");
 }
 
-/**
- * toggle navbar & overlay when click any navbar-link
- */
+addEventOnElem(navTogglers, "click", toggleNavbar);
 
-const navbarLinks = document.querySelectorAll("[data-navbar-link]");
-
-for (let i = 0; i < navbarLinks.length; i++) {
-  navbarLinks[i].addEventListener("click", function () {
-    navbar.classList.toggle("active");
-    overlay.classList.toggle("active");
-  });
+const closeNavbar = function () {
+  navbar.classList.remove("active");
+  overlay.classList.remove("active");
 }
 
-/*CARGA*/
-const contendor_loader = document.querySelector("#contendor_loader")
-
-window.addEventListener("load", () => {
-    contendor_loader.style.opacity = 0
-    contendor_loader.style.visibility = "hidden"
-})
-
+addEventOnElem(navbarLinks, "click", closeNavbar);
 
 
 
 /**
- * header & go-top-btn active
- * when window scroll down to 400px
+ * header & back top btn show when scroll down to 100px
  */
 
 const header = document.querySelector("[data-header]");
-const goTopBtn = document.querySelector("[data-go-top]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY >= 400) {
+const headerActive = function () {
+  if (window.scrollY > 80) {
     header.classList.add("active");
-    goTopBtn.classList.add("active");
+    backTopBtn.classList.add("active");
   } else {
     header.classList.remove("active");
-    goTopBtn.classList.remove("active");
+    backTopBtn.classList.remove("active");
   }
-});
-
-function mostrar(){
-  document.getElementById('img').style.display = 'block';
-}
-function ocultar(){
-  document.getElementById('img').style.display = 'none';
 }
 
-
-const translate = document.querySelectorAll(".translate");
-const big_title = document.querySelector(".big-title");
-const headerr = document.querySelector("header");
-const shadow = document.querySelector(".shadow");
-const content = document.querySelector(".content");
-const section = document.querySelector("section");
-const image_container = document.querySelector(".imgContainer");
-const opacity = document.querySelectorAll(".opacity");
-const border = document.querySelector(".border");
-
-let header_height = header.offsetHeight;
-let section_height = section.offsetHeight;
-
-window.addEventListener('scroll', () => {
-    let scroll = window.pageYOffset;
-    let sectionY = section.getBoundingClientRect();
-    
-    translate.forEach(element => {
-        let speed = element.dataset.speed;
-        element.style.transform = `translateY(${scroll * speed}px)`;
-    });
-
-    opacity.forEach(element => {
-        element.style.opacity = scroll / (sectionY.top + section_height);
-    })
-
-    big_title.style.opacity = - scroll / (header_height / 2) + 1;
-    shadow.style.height = `${scroll * 0.5 + 300}px`;
-
-    content.style.transform = `translateY(${scroll / (section_height + sectionY.top) * 50 - 50}px)`;
-    image_container.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -50 + 50}px)`;
-
-    border.style.width = `${scroll / (sectionY.top + section_height) * 30}%`;
-})
-
-const panels = document.querySelectorAll('.panel')
-
-panels.forEach(panel =>{
-    panel.addEventListener('click',()=>{
-        removeActionClasses()
-        panel.classList.add('active')
-    })
-})
-
-function removeActionClasses(){
-    panels.forEach(panel => {
-        panel.classList.remove('active')
-    })
-}
-
-
-function mostrar(){
-  document.getElementById('img').style.display = 'block';
-}
-function ocultar(){
-  document.getElementById('img').style.display = 'none';
-}
-
-
- 
-
-const fulImgBox = document.getElementById("fulImgBox"),
-fulImg = document.getElementById("fulImg");
-
-function openFulImg(reference){
-    fulImgBox.style.display = "flex";
-    fulImg.src = reference
-}
-function closeImg(){
-    fulImgBox.style.display = "none";
-}
+addEventOnElem(window, "scroll", headerActive);
