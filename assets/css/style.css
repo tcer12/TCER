@@ -1977,6 +1977,14 @@ header label{
   transform: scale(0.98);
 }
 
+.custom-input{
+  width: fit-content;
+}
+
+.custom{
+  background-color: var(--bittersweet);
+}
+
 @media (min-width: 300px) {
   .containerplanes{
     display: grid;
