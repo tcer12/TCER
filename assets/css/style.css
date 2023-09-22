@@ -1977,7 +1977,7 @@ header label{
   transform: scale(0.98);
 }
 
-@media (min-width: 500px) {
+@media (min-width: 300px) {
   .containerplanes{
     display: grid;
     grid-template-columns: 1fr;
@@ -1999,7 +1999,7 @@ header label{
   }
 }
 
-.opiniones{
+.opiniones, .funcionamiento{
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
@@ -2008,19 +2008,35 @@ header label{
 }
 
 @media (min-width: 500px) {
-  .opiniones{
+  .opiniones, .funcionamiento{
     grid-template-columns: 1fr;
   }
 }
 
 @media (min-width: 800px) {
-  .opiniones{
+  .opiniones, .funcionamiento{
     grid-template-columns: 1fr 1fr; 
   }
 }
 
 @media (min-width: 1200px) {
-  .opiniones{
+  .opiniones, .funcionamiento{
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.capturas{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.capturas__img{
+  border-radius: var(--radius-8);
+  height: 500px;
+}
+
+.capturas__desc{
+  font-size: var(--fs-6);
 }
