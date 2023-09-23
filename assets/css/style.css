@@ -2056,3 +2056,8 @@ header label{
   text-align: center;
   font-size: var(--fs-6);
 }
+
+.prueba-wifi{
+  margin-inline: auto;
+  margin-top: 50px;
+}
