@@ -2183,3 +2183,11 @@ header label{
   color: var(--black);
   background-color: #fff;
 }
+
+.trabajando{
+  background-color: white;
+}
+
+.error{
+  padding-top: 250px;
+}
