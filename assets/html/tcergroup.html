@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCER Group</title>
+
+    <!--ICON-->
+    <link rel="shortcut icon" href="./icontcer.svg" type="image/svg+xml">
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mediaqueries.css" />
+
+    <!--CEO-->
+    <meta name="title" content="TCER  - Technology Creators Emanuel Roa">
+    <meta name="description" content="Technology Creators Emanuel Roa by its abbreviation in English TCER is a startup from the Dominican Republic.">
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">TCER</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="https://tcer.com.do/">Home</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <img 
+            id="modeToggle"
+            class="icon color-icon"
+            src="../Imagenes/theme_light.png"
+            src-light="../Imagenes/theme_light.png"
+            src-dark="../Imagenes/theme_dark.png"
+            alt="Color them icon"
+            />
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">TCER</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="https://tcer.com.do/" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li>
+            <img
+              id="modeToggle2"
+              class="icon color-icon"
+              src="../Imagenes/theme_light.png"
+              src-light="../Imagenes/theme_light.png"
+              src-dark="../Imagenes/theme_dark.png"
+              alt="Color them icon"
+            />
+          </li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <div class="logoprincipal">
+          <img
+              src="../Imagenes/bosquejo.png"
+              src-light="../Imagenes/bosquejo.png"
+              src-dark="../Imagenes/bosquejo positivo.png"
+              alt="Email icon"
+              class="icon construcion construcion2"
+            />
+        </div>
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">TCER Group</p>
+        <h1 class="title">WE ARE WORKING. IT WILL BE READY SOON</h1>
+        <div class="btn-container">
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="../Imagenes/email_light.png"
+            src-light="../Imagenes/email_light.png"
+            src-dark="../Imagenes/email_dark.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:contact@tcer.com.do">contact@tcer.com.do</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="../Imagenes/linkedin_light.png"
+            src-light="../Imagenes/linkedin_light.png"
+            src-dark="../Imagenes/linkedin_dark.png"
+            alt="My LinkedIn profile"
+            class="icon linkedin-icon"
+            onclick="location.href='https://www.linkedin.com/company/tcer-company/'"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <!--Boton de ir hacia arriba-->
+    <div id="button-up">
+      <img
+            src="../Imagenes/subir.png"
+            src-light="../Imagenes/subir.png"
+            src-dark="../Imagenes/subir (1).png"
+            alt="Subir"
+            class="icon"
+          />
+    </div>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="https://tcer.com.do/">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 TCER. All Rights Reserved.</p>
+    </footer>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

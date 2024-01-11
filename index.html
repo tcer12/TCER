@@ -1,1012 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCER</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ICON-->
+    <link rel="shortcut icon" href="./icontcer.svg" type="image/svg+xml">
+    <!--CSS-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/mediaqueries.css" />
 
-  <!-- 
-    - primary meta tag
-  -->
-  <title>TCER  - Technology Creators Emanuel Roa</title>
-  <meta name="title" content="TCER  - Technology Creators Emanuel Roa">
-  <meta name="description" content="Technology Creators Emanuel Roa by its abbreviation in English TCER is a startup from the Dominican Republic.">
-
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./isotipo.svg" type="image/svg+xml">
-
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
-    rel="stylesheet">
-
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-bg.svg">
-  <link rel="preload" as="image" href="./assets/images/hero-banner-1.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg">
-  <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
-
-</head>
-
-<body id="top">
-
-  <!-- 
-    - #HEADER
-  -->
-
-  <header class="header" data-header>
-    <div class="container">
-
-      <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo">
-      </a>
-
-      <nav class="navbar" data-navbar>
-
-        <div class="wrapper">
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo">
-          </a>
-
-          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+    <!--CEO-->
+    <meta name="title" content="TCER  - Technology Creators Emanuel Roa">
+    <meta name="description" content="Technology Creators Emanuel Roa by its abbreviation in English TCER is a startup from the Dominican Republic.">
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">TCER</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <img 
+            id="modeToggle"
+            class="icon color-icon"
+            src="./assets/Imagenes/theme_light.png"
+            src-light="./assets/Imagenes/theme_light.png"
+            src-dark="./assets/Imagenes/theme_dark.png"
+            alt="Color them icon"
+            />
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">TCER</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li>
+            <img
+              id="modeToggle2"
+              class="icon color-icon"
+              src="./assets/Imagenes/theme_light.png"
+              src-light="./assets/Imagenes/theme_light.png"
+              src-dark="./assets/Imagenes/theme_dark.png"
+              alt="Color them icon"
+            />
+          </li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <div class="logoprincipal">
+          <img
+              src="./assets/Imagenes/Logos/Negativo TCER.svg"
+              src-light="./assets/Imagenes/Logos/Negativo TCER.svg"
+              src-dark="./assets/Imagenes/Logos/Positivo TCER.svg"
+              alt="Email icon"
+              class="icon logoprin logoprim"
+            />
+        </div>
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">TCER</p>
+        <h1 class="title">Innovation in motion</h1>
+        <p class="section__text__p2">Dominican Startup 🇩🇴</p>
+        <div class="btn-container">
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
           </button>
         </div>
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="#home" class="navbar-link" data-nav-link>Home</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#about" class="navbar-link" data-nav-link>About</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#courses" class="navbar-link" data-nav-link>Services</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="./assets/afiliados/afiliattes.html" class="navbar-link" data-nav-link>Affiliates</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="./assets/contacto/ContactSection.html" class="navbar-link" data-nav-link>Contact</a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <div class="header-actions">
-
-        <a href="#" class="btn has-before">
-          <span class="span">Contact</span>
-
-          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-        </a>
-
-        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
-          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-        </button>
-
+        <div id="socials-container">
+          <img
+            src="./assets/Imagenes/linkedin_light.png"
+            src-light="./assets/Imagenes/linkedin_light.png"
+            src-dark="./assets/Imagenes/linkedin_dark.png"
+            alt="My LinkedIn profile"
+            class="icon linkedin-icon"
+            onclick="location.href='https://linkedin.com/'"
+          />
+          <img
+            src="./assets/Imagenes/instagram_ligth.png"
+            src-light="./assets/Imagenes/instagram_ligth.png"
+            src-dark="./assets/Imagenes/instagram_dark.png"
+            alt="My Instagram profile"
+            class="icon github-icon"
+            onclick="location.href='https://www.instagram.com/tcer_company_/'"
+          />
+        </div>
       </div>
-
-      <div class="overlay" data-nav-toggler data-overlay></div>
-
-    </div>
-  </header>
-
-
-
-
-
-  <main>
-    <article>
-
-      <!-- 
-        - #HERO
-      -->
-
-      <section class="section hero has-bg-image" id="home" aria-label="home"
-        style="background-image: url('./assets/images/hero-bg.svg')">
-        <div class="container">
-
-          <div class="hero-content">
-
-            <h1 class="h1 section-title">
-              The Future of your <span class="span"> company </span> just a click away
-            </h1>
-
-            <p class="hero-text">
-              Technology Creators Emanuel Roa by its abbreviation in English TCER is a startup from the Dominican Republic.
-            </p>
-
-            <a href="#" class="btn has-before">
-              <span class="span">Read more</span>
-
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+              src="./assets/Imagenes/Logos/Negativo TCER.svg"
+              src-light="./assets/Imagenes/Logos/Negativo TCER.svg"
+              src-dark="./assets/Imagenes/Logos/Positivo TCER.svg"
+              alt="Email icon"
+              class="icon logoprin logoprim"
+            />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/Imagenes/experience_light.png"
+                src-light="./assets/Imagenes/experience_light.png"
+                src-dark="./assets/Imagenes/experience_dark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>3+ years <br />In the technology market</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/Imagenes/mapa.png"
+                src-light="./assets/Imagenes/mapa.png"
+                src-dark="./assets/Imagenes/mapa (1).png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Located</h3>
+              <p>Dominican Republic 🇩🇴</p>
+            </div>
           </div>
-
-          <figure class="hero-banner">
-
-            <div class="img-holder one" style="--width: 270; --height: 300;">
-              <img src="./assets/images/work-team.webp" width="270" height="300" alt="hero banner" class="img-cover">
-            </div>
-
-            <div class="img-holder two" style="--width: 240; --height: 370;">
-              <img src="./assets/images/programming-1.webp" width="240" height="370" alt="hero banner" class="img-cover">
-            </div>
-            <img src="./assets/images/about-shape-2.webp" width="380" height="190" alt="" class="shape hero-shape-1">
-
-            <img src="./assets/images/hero-shape-2.webp" width="622" height="551" alt="" class="shape hero-shape-2">
-
-          </figure>
-
-        </div>
-      </section>
-
-
-      <!-- 
-        - #ABOUT
-      -->
-
-      <section class="section about" id="about" aria-label="about">
-        <div class="container">
-
-          <figure class="about-banner">
-
-            <div class="img-holder" style="--width: 520; --height: 370;">
-              <img src="./assets/images/img-about.webp" width="520" height="370" loading="lazy" alt="about banner"
-                class="img-cover">
-            </div>
-
-            <!--<img src="./assets/images/about-shape-1.svg" width="360" height="420" loading="lazy" alt=""
-              class="shape about-shape-1">-->
-
-            <img src="./assets/images/about-shape-2.webp" width="371" height="220" loading="lazy" alt=""
-              class="shape about-shape-2">
-
-            <img src="./assets/images/about-shape-3.webp" width="722" height="528" loading="lazy" alt=""
-              class="shape about-shape-3">
-
-          </figure>
-
-          <div class="about-content">
-
-            <p class="section-subtitle">About Us</p>
-
-            <h2 class="h2 section-title">
-              More than 4 years <span class="span">offering digital</span>  services remotely
-            </h2>
-
-            <p class="section-text">
-              With more than 4 years of experience in the sector, TCER has been able to take advantage of the opportunities offered by the digital era to provide innovative solutions to companies of all sizes.
+          <div class="text-container">
+            <p>
+              With more than 4 years of experience in the sector, TCER has been able to take advantage of the opportunities offered by the digital era to provide innovative solutions to companies of all sizes and anyone who requires our services.
             </p>
-
-            <ul class="about-list">
-
-              <li class="about-item">
-                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-
-                <span class="span">Fast work process</span>
-              </li>
-
-              <li class="about-item">
-                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-
-                <span class="span">Specialized Team</span>
-              </li>
-
-              <li class="about-item">
-                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-
-                <span class="span">24/7 Hours Support</span>
-              </li>
-
-            </ul>
-
-            <img src="./assets/images/about-shape-4.webp" width="100" height="100" loading="lazy" alt=""
-              class="shape about-shape-4">
-
           </div>
-
         </div>
-      </section>
-
-      <!-- 
-        - #COURSE
-      -->
-
-      <section class="section course" id="courses" aria-label="course">
-        <div class="container">
-
-          <p class="section-subtitle">TCER</p>
-
-          <h2 class="h2 section-title">“Leadership is not about being in charge, but about taking care of the people in your charge.”</h2>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="course-card">
-
-                <figure class="card-banner img-holder" style="--width: 370; --height: 420;">
-                  <img src="./assets/images/roa.jpeg" width="370" height="420" loading="lazy"
-                    alt="Emanuel Roa CEO of TCER" class="img-cover">
-                </figure>
-                
-                <div class="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span class="span">CEO</span>
+      </div>
+      <!--<img
+        src="./assets/Imagenes/arrow_light.png"
+        src-light="./assets/Imagenes/arrow_light.png"
+        src-dark="./assets/Imagenes/arrow_dark.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />-->
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/Imagenes/checkmark_light.png"
+                  src-light="./assets/Imagenes/checkmark_light.png"
+                  src-dark="./assets/Imagenes/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
                 </div>
-
-                <div class="card-content">
-
-                  <span class="badge">Emanuel Roa</span>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Founder of TCER and Executive Director CEO</a>
-
-                  </h3>
-
-                  <div class="wrapper">
-
-                    <div class="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-                  </div>
-
+              </article>
+              <article>
+                <img
+                  src="./assets/Imagenes/checkmark_light.png"
+                  src-light="./assets/Imagenes/checkmark_light.png"
+                  src-dark="./assets/Imagenes/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
                 </div>
-
-              </div>
-            </li>
-
-            
-
-            <li>
-              <div class="course-card">
-
-                <figure class="card-banner img-holder" style="--width: 370; --height: 420;">
-                  <img src="./assets/images/biscen.jpeg" width="370" height="420" loading="lazy"
-                    alt="Biscen COO of TCER" class="img-cover">
-                </figure>
-
-                <div class="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span class="span">COO</span>
+              </article>
+              <article>
+                <img
+                  src="./assets/Imagenes/checkmark_light.png"
+                  src-light="./assets/Imagenes/checkmark_light.png"
+                  src-dark="./assets/Imagenes/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Experienced</p>
                 </div>
-
-                <div class="card-content">
-
-                  <span class="badge">Biscen Fabián Pichardo Rosado</span>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Co-founder of TCER and director of COO operations</a>
-                  </h3>
-
-                  <div class="wrapper">
-
-                    <div class="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                  </div>
-
+              </article>
+              <article>
+                <img
+                  src="./assets/Imagenes/checkmark_light.png"
+                  src-light="./assets/Imagenes/checkmark_light.png"
+                  src-dark="./assets/Imagenes/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Advanced</p>
                 </div>
-
-              </div>
-            </li>
-
-          </ul>
-
+              </article>
+              <article>
+                <img
+                  src="./assets/Imagenes/checkmark_light.png"
+                  src-light="./assets/Imagenes/checkmark_light.png"
+                  src-dark="./assets/Imagenes/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React </h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/Imagenes/checkmark_light.png"
+                  src-light="./assets/Imagenes/checkmark_light.png"
+                  src-dark="./assets/Imagenes/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Next</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/Imagenes/checkmark_light.png"
+                  src-light="./assets/Imagenes/checkmark_light.png"
+                  src-dark="./assets/Imagenes/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/Imagenes/checkmark_light.png"
+                  src-light="./assets/Imagenes/checkmark_light.png"
+                  src-dark="./assets/Imagenes/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Flask</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/Imagenes/checkmark_light.png"
+                  src-light="./assets/Imagenes/checkmark_light.png"
+                  src-dark="./assets/Imagenes/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
-      </section>
-
-
-
-      <!-- 
-        - #CATEGORY
-      -->
-
-      <section class="section category" aria-label="category">
-        <div class="container">
-
-          <p class="section-subtitle">Why choose us</p>
-
-          <h2 class="h2 section-title">
-            Specialists in helping <span class="span"> clients</span> overcome their difficulties
-          </h2>
-
-          <p class="section-text">
-            “Your support has been vital to continue growing. Thanks for your preference!"
-          </p>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="category-card" style="--color: 170, 75%, 41%">
-
-                <div class="card-icon">
-                  <img src="./assets/images/category-1.svg" width="40" height="40" loading="lazy"
-                    alt="Online Degree Programs" class="img">
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">Specialized Team</a>
-                </h3>
-
-                <p class="card-text">
-                  We have an expert team with more than 3 years of experience in the labor sector, highly trained to provide services of the highest quality.
-                </p>
-
-
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card" style="--color: 351, 83%, 61%">
-
-                <div class="card-icon">
-                  <img src="./assets/images/category-2.svg" width="40" height="40" loading="lazy"
-                    alt="Non-Degree Programs" class="img">
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">Fast work process</a>
-                </h3>
-
-                <p class="card-text">
-                  We respect our clients' time with our agile and effective methodology.
-                </p>
-
-
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card" style="--color: 229, 75%, 58%">
-
-                <div class="card-icon">
-                  <img src="./assets/images/category-3.svg" width="40" height="40" loading="lazy"
-                    alt="Off-Campus Programs" class="img">
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">24/7 hour support</a>
-                </h3>
-
-                <p class="card-text">
-                  We have support 24 hours a day in our email to resolve your doubts, queries and requests. Trust us to achieve exceptional results!
-                </p>
-
-
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card" style="--color: 42, 94%, 55%">
-
-                <div class="card-icon">
-                  <img src="./assets/images/category-4.svg" width="40" height="40" loading="lazy"
-                    alt="Hybrid Distance Programs" class="img">
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">Values ​​that define us </a>
-                </h3>
-
-                <p class="card-text">
-                  We identify ourselves as a corporate identity with values ​​that have represented us in our work with our clients.
-                </p>
-
-                
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-      <!-- 
-        - #COURSE
-      -->
-
-      <section class="section course" id="courses" aria-label="course">
-        <div class="container">
-
-          <p class="section-subtitle">Services</p>
-
-          <h2 class="h2 section-title">“Your preference is our greatest satisfaction”</h2>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="course-card">
-
-                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                  <img src="./assets/images/course-1.jpg" width="370" height="220" loading="lazy"
-                    alt="Build Responsive Real- World Websites with HTML and CSS" class="img-cover">
-                </figure>
-
-                <div class="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span class="span">3 Weeks</span>
-                </div>
-
-                <div class="card-content">
-
-                  <span class="badge">Beginner</span>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Build Responsive Real- World Websites with HTML and CSS</a>
-                  </h3>
-
-                  <div class="wrapper">
-
-                    <div class="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">(5.0/7 Rating)</p>
-
-                  </div>
-
-                  <data class="price" value="29">$29.00</data>
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">8 Lessons</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">20 Students</span>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="course-card">
-
-                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                  <img src="./assets/images/course-2.jpg" width="370" height="220" loading="lazy"
-                    alt="Java Programming Masterclass for Software Developers" class="img-cover">
-                </figure>
-
-                <div class="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span class="span">8 Weeks</span>
-                </div>
-
-                <div class="card-content">
-
-                  <span class="badge">Advanced</span>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Java Programming Masterclass for Software Developers</a>
-                  </h3>
-
-                  <div class="wrapper">
-
-                    <div class="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">(4.5 /9 Rating)</p>
-
-                  </div>
-
-                  <data class="price" value="49">$49.00</data>
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">15 Lessons</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">35 Students</span>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="course-card">
-
-                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                  <img src="./assets/images/course-3.jpg" width="370" height="220" loading="lazy"
-                    alt="The Complete Camtasia Course for Content Creators" class="img-cover">
-                </figure>
-
-                <div class="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span class="span">3 Weeks</span>
-                </div>
-
-                <div class="card-content">
-
-                  <span class="badge">Intermediate</span>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">The Complete Camtasia Course for Content Creators</a>
-                  </h3>
-
-                  <div class="wrapper">
-
-                    <div class="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">(4.9 /7 Rating)</p>
-
-                  </div>
-
-                  <data class="price" value="35">$35.00</data>
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">13 Lessons</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">18 Students</span>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-          <a href="#" class="btn has-before">
-            <span class="span">Browse more courses</span>
-
-            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-          </a>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #VIDEO
-      -->
-
-      <section class="video has-bg-image" aria-label="video"
-        style="background-image: url('./assets/images/video-bg.png')">
-        <div class="container">
-
-          <div class="video-card">
-
-            <div class="video-banner img-holder has-after" style="--width: ; --height: ;">
-              <img src="./assets/images/" width="970" height="550" loading="lazy" alt="video banner"
-                class="img-cover">
-
-              <button class="play-btn" aria-label="play video">
-                <ion-icon name="play" aria-hidden="true"></ion-icon>
+      </div>
+      <!--<img
+        src="./assets/Imagenes/arrow_light.png"
+        src-light="./assets/Imagenes/arrow_light.png"
+        src-dark="./assets/Imagenes/arrow_dark.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />-->
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Imagenes/project-1.webp"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Roa +</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.instagram.com/roa__plus/'"
+              >
+                Instagram
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./assets/html/roaplus.html'"
+              >
+                Live Demo
               </button>
             </div>
-
-            <img src="./assets/images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
-              class="shape video-shape-1">
-
-            <img src="./assets/images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
-              class="shape video-shape-2">
-
           </div>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #STATE
-      -->
-
-      <section class="section stats" aria-label="stats">
-        <div class="container">
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="stats-card" style="--color: 170, 75%, 41%">
-                <h3 class="card-title">500+</h3>
-
-                <p class="card-text">Satisfied customers</p>
-              </div>
-            </li>
-
-            <li>
-              <div class="stats-card" style="--color: 351, 83%, 61%">
-                <h3 class="card-title">99.99%</h3>
-
-                <p class="card-text">ATISFACTION RATE</p>
-              </div>
-            </li>
-
-            <li>
-              <div class="stats-card" style="--color: 260, 100%, 67%">
-                <h3 class="card-title">9</h3>
-
-                <p class="card-text">project</p>
-              </div>
-            </li>
-
-            <li>
-              <div class="stats-card" style="--color: 42, 94%, 55%">
-                <h3 class="card-title">4+</h3>
-
-                <p class="card-text">years experience</p>
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #BLOG
-      -->
-
-      <section class="section blog has-bg-image" id="blog" aria-label="blog"
-        style="background-image: url('./assets/images/blog-bg.svg')">
-        <div class="container">
-
-          <p class="section-subtitle">TCER</p>
-
-          <h2 class="h2 section-title">You may be interested</h2>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                  <img src="./assets/images/traductortcer.webp" width="370" height="370" loading="lazy"
-                    alt="Become A Better Blogger: Content Planning" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <a href="https://www.instagram.com/tcer_translator/" class="card-btn" aria-label="read more">
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
-
-                  <a href="https://www.instagram.com/tcer_translator/" class="card-subtitle">Services</a>
-
-                  <h3 class="h3">
-                    <a href="https://www.instagram.com/tcer_translator/" class="card-title">TCER Translator</a>
-                  </h3>
-
-                  <p class="card-text">
-                    TCER Translator is a great option for those who need accurate and reliable translations in multiple languages.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                  <img src="./assets/images/TCER Group.png" width="370" height="370" loading="lazy"
-                    alt="Become A Better Blogger: Content Planning" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <a href="https://www.instagram.com/tcer_group/" class="card-btn" aria-label="read more">
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
-
-                  <a href="https://www.instagram.com/tcer_group/" class="card-subtitle">Coalition</a>
-
-                  <h3 class="h3">
-                    <a href="https://www.instagram.com/tcer_group/" class="card-title">TCER Group</a>
-                  </h3>
-
-                  <p class="card-text">
-                    TCER Group is a business coalition of various companies. We come together to increase our credibility and quality as organizations.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                  <img src="./assets/images/logoshe.jpg" width="370" height="370" loading="lazy"
-                    alt="Become A Better Blogger: Content Planning" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <a href="https://www.instagram.com/sheet_cloud/" class="card-btn" aria-label="read more">
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
-
-                  <a href="https://www.instagram.com/sheet_cloud/" class="card-subtitle">Company</a>
-
-                  <h3 class="h3">
-                    <a href="https://www.instagram.com/sheet_cloud/" class="card-title">Sheet Cloud</a>
-                  </h3>
-
-                  <p class="card-text">
-                    We offer hosting services for everyone, join the Sheet Cloud ecosystem and enjoy our advantages.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-          <img src="./assets/images/blog-shape.png" width="186" height="186" loading="lazy" alt=""
-            class="shape blog-shape">
-
-        </div>
-      </section>
-
-    </article>
-  </main>
-
-
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
-
-  <footer class="footer" style="background-image: url('./assets/images/logo.svg')">
-
-    <div class="footer-top section">
-      <div class="container grid-list">
-
-        <div class="footer-brand">
-
-          <a href="#" class="logo">
-            <img src="./assets/images/logoblan.webp" width="262" height="10" alt="EduWeb logo">
-          </a>
-
-          <p class="footer-brand-text">
-            Technology Creators Emanuel Roa by its abbreviation in English TCER is a startup from the Dominican Republic.
-          </p>
-
-          <div class="wrapper">
-            <span class="span">Call:</span>
-
-            <a href="tel:+011234567890" class="footer-link">+01 809 605 4465</a>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Imagenes/project-2.webp"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">TCER Group</h2>
+            <p></p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.instagram.com/tcer_group/'"
+              >
+              Instagram
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./assets/html/tcergroup.html'"
+              >
+                Live Demo
+              </button>
+            </div>
           </div>
-
-          <div class="wrapper">
-            <span class="span">Email:</span>
-
-            <a href="mailto:info@eduweb.com" class="footer-link">info@tcer.com.do</a>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Imagenes/project-3.webp"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Sheet Cloud</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.instagram.com/sheet_cloud/'"
+              >
+              Instagram
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./assets/html/sheetcloud.html'"
+              >
+                Live Demo
+              </button>
+            </div>
           </div>
-
         </div>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Online Platform</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">About</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Services</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Events</a>
-          </li>
-
-          <li>
-            <a href="./assets/afiliados/afiliattes.html" class="footer-link">Affiliates</a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Links</p>
-          </li>
-
-          <li>
-            <a href="./assets/contacto/ContactSection.html" class="footer-link">Contact Us</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">FAQ's</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Opinions</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Coming Soon</a>
-          </li>
-
-        </ul>
-
-        <div class="footer-list">
-
-          <p class="footer-list-title">Contacts</p>
-
-          <p class="footer-list-text">
-            Enter your email address
-          </p>
-
-          <form action="" class="newsletter-form">
-            <input type="email" name="email_address" placeholder="Your email" required class="input-field">
-
-            <button type="submit" class="btn has-before">
-              <span class="span">Subscribe</span>
-
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </button>
-          </form>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="https://www.linkedin.com/company/99515122/admin/feed/posts/?feedType=following" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.instagram.com/tcer__company/" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.youtube.com/channel/UCvL60lFs-E3IesUlXAOKinQ" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
       </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-
-        <p class="copyright">
-          Copyright 2024 All Rights Reserved by <a href="#" class="copyright-link">TCER Company</a>
-        </p>
-
+      <!--<img
+        src="./assets/Imagenes/arrow_light.png"
+        src-light="./assets/Imagenes/arrow_light.png"
+        src-dark="./assets/Imagenes/arrow_dark.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />-->
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/Imagenes/email_light.png"
+            src-light="./assets/Imagenes/email_light.png"
+            src-dark="./assets/Imagenes/email_dark.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:contact@tcer.com.do">contact@tcer.com.do</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/Imagenes/linkedin_light.png"
+            src-light="./assets/Imagenes/linkedin_light.png"
+            src-dark="./assets/Imagenes/linkedin_dark.png"
+            alt="My LinkedIn profile"
+            class="icon linkedin-icon"
+            onclick="location.href='https://www.linkedin.com/company/tcer-company/'"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
       </div>
+    </section>
+    <!--Boton de ir hacia arriba-->
+    <div id="button-up">
+      <img
+            src="./assets/Imagenes/subir.png"
+            src-light="./assets/Imagenes/subir.png"
+            src-dark="./assets/Imagenes/subir (1).png"
+            alt="Subir"
+            class="icon"
+          />
     </div>
-
-  </footer>
-
-
-
-
-
-  <!-- 
-    - #BACK TO TOP
-  -->
-
-  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
-    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-  </a>
-
-
-
-
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js" defer></script>
-
-  <!-- 
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 TCER. All Rights Reserved.</p>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

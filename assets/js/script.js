@@ -1,63 +1,79 @@
-'use strict';
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
 
+// Dark / light mode
 
+const btn = document.getElementById("modeToggle");
+const btn2 = document.getElementById("modeToggle2");
+const themeIcons = document.querySelectorAll(".icon");
+const currentTheme = localStorage.getItem("theme");
 
-/**
- * add event on element
- */
+if (currentTheme === "dark") {
+  setDarkMode();
+}
 
-const addEventOnElem = function (elem, type, callback) {
-  if (elem.length > 1) {
-    for (let i = 0; i < elem.length; i++) {
-      elem[i].addEventListener(type, callback);
+btn.addEventListener("click", function () {
+  setTheme();
+});
+
+btn2.addEventListener("click", function () {
+  setTheme();
+});
+
+function setTheme() {
+  let currentTheme = document.body.getAttribute("theme");
+
+  if (currentTheme === "dark") {
+    setLightMode();
+  } else {
+    setDarkMode();
+  }
+}
+
+function setDarkMode() {
+  document.body.setAttribute("theme", "dark");
+  localStorage.setItem("theme", "dark");
+
+  themeIcons.forEach((icon) => {
+    icon.src = icon.getAttribute("src-dark");
+  });
+}
+
+function setLightMode() {
+  document.body.removeAttribute("theme");
+  localStorage.setItem("theme", "light");
+
+  themeIcons.forEach((icon) => {
+    icon.src = icon.getAttribute("src-light");
+  });
+}
+
+document.getElementById("button-up").addEventListener("click", scrollUp);
+
+function scrollUp(){
+
+    var currentScroll = document.documentElement.scrollTop;
+
+    if (currentScroll > 0){
+        window.requestAnimationFrame(scrollUp);
+        window.scrollTo (0, currentScroll - (currentScroll / 10));
     }
-  } else {
-    elem.addEventListener(type, callback);
-  }
 }
+//Boton Subir
+buttonUp = document.getElementById("button-up");
 
+window.onscroll = function(){
 
+    var scroll = document.documentElement.scrollTop;
 
-/**
- * navbar toggle
- */
+    if (scroll > 500){
+        buttonUp.style.transform = "scale(1)";
+    }else if(scroll < 500){
+        buttonUp.style.transform = "scale(0)";
+    }
 
-const navbar = document.querySelector("[data-navbar]");
-const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const navLinks = document.querySelectorAll("[data-nav-link]");
-const overlay = document.querySelector("[data-overlay]");
-
-const toggleNavbar = function () {
-  navbar.classList.toggle("active");
-  overlay.classList.toggle("active");
 }
-
-addEventOnElem(navTogglers, "click", toggleNavbar);
-
-const closeNavbar = function () {
-  navbar.classList.remove("active");
-  overlay.classList.remove("active");
-}
-
-addEventOnElem(navLinks, "click", closeNavbar);
-
-
-
-/**
- * header active when scroll down to 100px
- */
-
-const header = document.querySelector("[data-header]");
-const backTopBtn = document.querySelector("[data-back-top-btn]");
-
-const activeElem = function () {
-  if (window.scrollY > 100) {
-    header.classList.add("active");
-    backTopBtn.classList.add("active");
-  } else {
-    header.classList.remove("active");
-    backTopBtn.classList.remove("active");
-  }
-}
-
-addEventOnElem(window, "scroll", activeElem);
