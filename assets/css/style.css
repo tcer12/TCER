@@ -231,8 +231,7 @@ nav a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+  margin: 3.5rem 10rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -247,14 +246,15 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
 }
 
 .section__pic-container {
   display: flex;
-  height: 400px;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  height: 275px;
   width: 400px;
-  margin: auto 0;
 }
 
 .section__text {
@@ -346,11 +346,6 @@ section {
 }
 
 /* ABOUT SECTION */
-
-#about {
-  position: relative;
-}
-
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
@@ -392,11 +387,6 @@ section {
   height: 80%;
 }
 
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
 
 /* EXPERIENCE SECTION */
 
@@ -482,6 +472,7 @@ article .icon {
   background: var(--background-color);
   margin: 2rem auto;
   padding: 0.5rem;
+  gap: 25px;
 }
 
 .contact-info-container {

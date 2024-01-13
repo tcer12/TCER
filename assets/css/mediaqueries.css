@@ -1,6 +1,5 @@
 @media screen and (max-width: 1400px) {
   #profile {
-    height: 83vh;
     margin-bottom: 6rem;
   }
   .about-containers {
@@ -33,11 +32,6 @@
   section {
     margin: 0 5%;
   }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
   .about-containers {
     margin-top: 0;
   }
@@ -57,7 +51,7 @@
   }
   footer nav {
     height: fit-content;
-    margin-bottom: 2rem;
+    margin-block: 2rem;
   }
   .about-containers,
   .contact-info-upper-container,
@@ -95,5 +89,8 @@
   }
   .text-container {
     text-align: justify;
+  }
+  .logoprim{
+    height: 25.5rem;
   }
 }
