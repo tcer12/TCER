@@ -1,79 +1,72 @@
-function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
-}
+'use strict';
 
-// Dark / light mode
 
-const btn = document.getElementById("modeToggle");
-const btn2 = document.getElementById("modeToggle2");
-const themeIcons = document.querySelectorAll(".icon");
-const currentTheme = localStorage.getItem("theme");
 
-if (currentTheme === "dark") {
-  setDarkMode();
-}
+/**
+ * add event listener on multiple elements
+ */
 
-btn.addEventListener("click", function () {
-  setTheme();
-});
-
-btn2.addEventListener("click", function () {
-  setTheme();
-});
-
-function setTheme() {
-  let currentTheme = document.body.getAttribute("theme");
-
-  if (currentTheme === "dark") {
-    setLightMode();
-  } else {
-    setDarkMode();
+const addEventOnElements = function (elements, eventType, callback) {
+  for (let i = 0, len = elements.length; i < len; i++) {
+    elements[i].addEventListener(eventType, callback);
   }
 }
 
-function setDarkMode() {
-  document.body.setAttribute("theme", "dark");
-  localStorage.setItem("theme", "dark");
 
-  themeIcons.forEach((icon) => {
-    icon.src = icon.getAttribute("src-dark");
-  });
+
+/**
+ * NAVBAR TOGGLE FOR MOBILE
+ */
+
+const navbar = document.querySelector("[data-navbar]");
+const navTogglers = document.querySelectorAll("[data-nav-toggler]");
+const overlay = document.querySelector("[data-overlay]");
+
+const toggleNavbar = function () {
+  navbar.classList.toggle("active");
+  overlay.classList.toggle("active");
+  document.body.classList.toggle("nav-active");
 }
 
-function setLightMode() {
-  document.body.removeAttribute("theme");
-  localStorage.setItem("theme", "light");
+addEventOnElements(navTogglers, "click", toggleNavbar);
 
-  themeIcons.forEach((icon) => {
-    icon.src = icon.getAttribute("src-light");
-  });
-}
 
-document.getElementById("button-up").addEventListener("click", scrollUp);
 
-function scrollUp(){
+/**
+ * HEADER
+ * active header when window scroll down to 100px
+ */
 
-    var currentScroll = document.documentElement.scrollTop;
+const header = document.querySelector("[data-header]");
 
-    if (currentScroll > 0){
-        window.requestAnimationFrame(scrollUp);
-        window.scrollTo (0, currentScroll - (currentScroll / 10));
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 100) {
+    header.classList.add("active");
+  } else {
+    header.classList.remove("active");
+  }
+});
+
+
+
+/**
+ * SCROLL REVEAL
+ */
+
+const revealElements = document.querySelectorAll("[data-reveal]");
+const revealDelayElements = document.querySelectorAll("[data-reveal-delay]");
+
+const reveal = function () {
+  for (let i = 0, len = revealElements.length; i < len; i++) {
+    if (revealElements[i].getBoundingClientRect().top < window.innerHeight / 1.2) {
+      revealElements[i].classList.add("revealed");
     }
+  }
 }
-//Boton Subir
-buttonUp = document.getElementById("button-up");
 
-window.onscroll = function(){
-
-    var scroll = document.documentElement.scrollTop;
-
-    if (scroll > 500){
-        buttonUp.style.transform = "scale(1)";
-    }else if(scroll < 500){
-        buttonUp.style.transform = "scale(0)";
-    }
-
+for (let i = 0, len = revealDelayElements.length; i < len; i++) {
+  revealDelayElements[i].style.transitionDelay = revealDelayElements[i].dataset.revealDelay;
 }
+
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
