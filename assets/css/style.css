@@ -511,11 +511,25 @@ body.nav-active { overflow: hidden; }
 .contact { padding-block-end: 0; }
 
 .contact-card {
+  position: relative;
   background-color: var(--snow);
   padding: 32px;
   border-radius: var(--radius-8);
   display: grid;
   gap: 40px;
+}
+
+.contact-card::before{
+  display: flex;
+  justify-content: center;
+  content: url("../images/image.webp");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(210, 243, 200);
+  z-index: 1;
 }
 
 .contact .section-title { margin-block-start: 20px; }
